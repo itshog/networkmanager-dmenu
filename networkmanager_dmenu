@@ -155,12 +155,13 @@ def is_installed(cmd):
     return which(cmd) is not None
 
 
+use_bluetoothctl = CONF.getboolean('bluetooth', 'use_bluetoothctl', fallback=True)
 def bluetooth_get_enabled():
     """Check if bluetooth is enabled. Try bluetoothctl first, then rfkill.
 
     Returns None if no bluetooth device was found.
     """
-    if is_installed('bluetoothctl'):
+    if is_installed('bluetoothctl') and use_bluetoothctl is True:
         # Times out in 2 seconds, otherwise bluetoothctl will hang if bluetooth
         # service isn't running.
         try:
@@ -691,7 +692,7 @@ def toggle_bluetooth(enable):
     https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/include/uapi/linux/rfkill.h?h=v5.8.9
 
     """
-    if is_installed('bluetoothctl'):
+    if is_installed('bluetoothctl') and use_bluetoothctl is True:
         # Times out in 2 seconds, otherwise bluetoothctl will hang if bluetooth
         # service isn't running.
         try:

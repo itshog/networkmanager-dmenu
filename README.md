@@ -83,27 +83,28 @@ Manage NetworkManager connections with dmenu, [Rofi][1], [Bemenu][2],
 
 ### Config.ini values
 
-| Section              | Key                | Default                | Notes                                            |
-|----------------------|--------------------|------------------------|--------------------------------------------------|
-| `[dmenu]`            | `compact`          | `False`                |                                                  |
-|                      | `dmenu_command`    | `dmenu`                | Command can include arguments                    |
-|                      | `list_saved`       | `False`                |                                                  |
-|                      | `pinentry`         | None                   |                                                  |
-|                      | `active_chars`     | ==                     | Prefix of active connection                      |
-|                      | `highlight`        | `False`                | Only applicable to rofi / wofi                   |
-|                      | `highlight_fg`     | None                   | Only applicable to wofi                          |
-|                      | `highlight_bg`     | None                   | Only applicable to wofi                          |
-|                      | `highlight_bold`   | `True`                 | Only applicable to wofi                          |
-|                      | `wifi_chars`       | None                   | String of 4 unicode characters                   |
-|                      | `wifi_icons`       | None                   | String of icon characters                        |
-|                      | `format`           | (depends on `compact`) | Python-style format string                       |
-| `[pinentry]`         | `description`      | `Get network password` |                                                  |
-|                      | `prompt`           | `Password:`            |                                                  |
-| `[dmenu_passphrase]` | `obscure`          | `False`                |                                                  |
-|                      | `obscure_color`    | `#222222`              | Only applicable to dmenu                         |
-| `[editor]`           | `gui_if_available` | `True`                 |                                                  |
-|                      | `terminal`         | `xterm`                |                                                  |
-| `[nmdm]`             | `rescan_delay`     | `5`                    | Adjust delay in re-opening nmdm following rescan |
+| Section              | Key                | Default                | Notes                                                                                           |
+|----------------------|--------------------|------------------------|-------------------------------------------------------------------------------------------------|
+| `[dmenu]`            | `compact`          | `False`                |                                                                                                 |
+|                      | `dmenu_command`    | `dmenu`                | Command can include arguments                                                                   |
+|                      | `list_saved`       | `False`                |                                                                                                 |
+|                      | `pinentry`         | None                   |                                                                                                 |
+|                      | `active_chars`     | ==                     | Prefix of active connection                                                                     |
+|                      | `highlight`        | `False`                | Only applicable to rofi / wofi                                                                  |
+|                      | `highlight_fg`     | None                   | Only applicable to wofi                                                                         |
+|                      | `highlight_bg`     | None                   | Only applicable to wofi                                                                         |
+|                      | `highlight_bold`   | `True`                 | Only applicable to wofi                                                                         |
+|                      | `wifi_chars`       | None                   | String of 4 unicode characters                                                                  |
+|                      | `wifi_icons`       | None                   | String of icon characters                                                                       |
+|                      | `format`           | (depends on `compact`) | Python-style format string                                                                      |
+| `[pinentry]`         | `description`      | `Get network password` |                                                                                                 |
+|                      | `prompt`           | `Password:`            |                                                                                                 |
+| `[dmenu_passphrase]` | `obscure`          | `False`                |                                                                                                 |
+|                      | `obscure_color`    | `#222222`              | Only applicable to dmenu                                                                        |
+| `[editor]`           | `gui_if_available` | `True`                 |                                                                                                 |
+|                      | `terminal`         | `xterm`                |                                                                                                 |
+| `[nmdm]`             | `rescan_delay`     | `5`                    | Adjust delay in re-opening nmdm following rescan                                                |
+| `[bluetooth]`        | `use_bluetoothctl` | `True`                 | Setting this to `True` while the bluetooth service isn't running may lead to a delay at startup |
 
 ## Usage
 
